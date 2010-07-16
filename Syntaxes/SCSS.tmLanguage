@@ -510,7 +510,7 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(:)\s*</string>
+					<string>(:)\s{0,}(?!(\s{0,}{))</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -519,6 +519,8 @@
 							<string>punctuation.separator.key-value.css</string>
 						</dict>
 					</dict>
+					<key>comment</key>
+					<string>Kuroir: fixed nested elements for sass.</string>
 					<key>end</key>
 					<string>\s*(;|(?=\}))</string>
 					<key>endCaptures</key>
